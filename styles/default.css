@@ -1,0 +1,85 @@
+body
+	{
+		width: 100%;
+		min-width: 600px;
+		background-color: black;
+		background-image: url(../images/blue-black-gradient.png);
+		background-position: 0px 0px;
+		background-repeat: repeat-x;
+		background-size: 10px 75px;
+		margin: 0px;
+		padding: 0px;
+		font-family: Verdana, Geneva, sans-serif;
+		color: white;
+	}
+a:link
+	{
+		color: #3333ff;
+		text-decoration: none;
+	}
+a:visited
+	{
+		color: #3366ff;
+		text-decoration: none;
+	}
+a:hover
+	{
+		color: #0000cc;
+		text-decoration: none;
+	}
+img
+	{
+		border: 0px;
+	}
+#header
+	{
+		width: 100%;
+	}
+	#header h1,h3
+	{
+		margin: 2px;
+		text-indent: 4%;
+	}
+#navigation
+	{
+		width: inherit;
+		margin: 5px;
+		font-size: x-small;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+	}
+#bodyer
+	{
+		margin-top: 0px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 0px;
+	}
+#footer
+	{
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		border-top: 1px solid white;
+		font-size: xx-small;
+		text-align: right;
+	}
+.marginalSpace
+	{
+		height: 20px;
+	}
+.horizontalBar
+	{
+		width: 99%;
+		background-image: url(../images/horizontal-bar.png);
+		margin: 9px 0px 9px 0px;
+	}
+.alignCenter
+	{
+		text-align: center;
+	}

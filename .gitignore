@@ -1,0 +1,4 @@
+*.png
+*.pdn
+images/
+database_connect.php
