@@ -1,0 +1,86 @@
+textarea
+	{
+		resize: none;
+		color: white;
+		background-color: black;
+		border: 1px solid #c0c0c0;
+		width: 207px;
+	}
+#filterOptions
+	{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		width: inherit;
+		padding: 5px;
+		line-height: 23px;
+	}
+#addToDatabase
+	{
+		background-image: url(http://www.compdewddevelopment.com/images/green-plus-sprite.png);
+		background-position: 0px 0px;
+		background-repeat: no-repeat;
+		height: 15px;
+		text-indent: 20px;
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+#addToDatabase:hover
+	{
+		background-position: 0px -15px;
+	}
+#gpuStatsTable
+	{
+		margin-left: auto;
+		margin-right: auto;
+		min-width: 600px;
+		padding-right: 15px;
+	}
+#gpuStatsTable td, th
+	{
+		text-align: center;
+		vertical-align: middle;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+#gpuStatsTableHeader
+	{
+		background-color: black;
+		width: inherit;
+	}
+#gpuStatsTableHeader th
+	{
+		vertical-align: middle;
+		text-align: center;
+	}
+/*.gpuStatsTableHeader
+	{
+		position: absolute;
+		z-index: 1;
+		top: -38px;
+	}
+.gpuStatsTableHeader_fixed
+	{
+		position: fixed;
+		top: 0px;
+		border: 1px solid #c0c0c0;
+		border-top: none;
+	}*/
+#topRedirectionDiv
+	{
+		background-color: black;
+		position: fixed;
+		right: 5px;
+		bottom: 5px;
+	}
+.label
+	{
+		display: inline-block;
+		cursor: default;
+	}
+.filterSubOption
+	{
+		position: relative;
+		left: 18px;
+	}
