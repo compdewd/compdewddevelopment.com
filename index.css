@@ -13,48 +13,5 @@
 }
 #homeTable td
 {
-	width: 33%;
 	vertical-align: top;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-#homeTable .topmost .leftmost
-{
-	text-align: center;
-	border-right: 1px solid white;
-}
-#homeTable .topmost .middlemost
-{
-	text-align: center;
-	border-right: 1px solid white;
-}
-#homeTable .topmost .rightmost
-{
-	text-align: center;
-}
-#homeTable .middlemost .leftmost
-{
-	border-right: 1px solid white;
-}
-#homeTable .middlemost .middlemost
-{
-	border-right: 1px solid white;
-}
-#homeTable .middlemost .rightmost
-{
-	
-}
-#homeTable .middlemost .topmost
-{
-	border-top: 1px solid white;
-}
-#homeTable .bottommost .topmost
-{
-	border-top: 1px solid white;
-}
-#homeTable #projects
-{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
 }
