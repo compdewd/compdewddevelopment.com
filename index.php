@@ -28,24 +28,17 @@
 				</div>
 				<div id="content">
 					<table id="homeTable" cellspacing="0px">
-						<tr class="topmost">
-							<td class="leftmost">
+						<tr>
+							<td>
 								<h2>About</h2>
-							</td>
-							<td class="middlemost">
-								<h2>Projects</h2>
-							</td>
-							<td class="rightmost">
-								<h2>Contact</h2>
-							</td>
-						</tr>
-						<tr class="middlemost">
-							<td class="leftmost" style="min-width:215px;">
 								<i>Compdewd Development</i> is a set of software and database projects by Patrick Rebsch (compdewd).<br><br>
 								All projects are provided to the public for free. It is Patrick's intent to learn from the projects and have other people learn from them as well.<br><br>
 								So check out the projects and enjoy!
 							</td>
-							<td class="middlemost" style="min-width:215px;">
+						</tr>
+						<tr>
+							<td>
+								<h2>Projects</h2>
 								<table id="projects">
 									<tr>
 										<td style="text-align:right;">
@@ -75,8 +68,10 @@
 									</tr>
 								</table>
 							</td>
-							<td class="rightmost" style="min-width:215px;">
-								Contact information is as follows:
+						</tr>
+						<tr>
+							<td>
+								<h2>Contact</h2>
 								<ul>
 									<li><a href="mailto:support@compdewddevelopment.com" target="_blank">support@compdewddevelopment.com</a> - For help with the site or help with a project. General questions may go here too.</li>
 									<li><a href="mailto:suggestionbox@compdewddevelopment.com" target="_blank">suggestionbox@compdewddevelopment.com</a> - For suggestions for the site or for a project.</li>
@@ -86,58 +81,25 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="5">
-								<?php
-									create_vertical_space("15px");
-								?>
+							<td>
+								<img src="images/blue-transparent-plus.png" alt="" style="padding-bottom:2px;">
 							</td>
-						</tr>
-						<tr class="middlemost">
-							<td colspan="3" class="topmost">
-								<table>
-									<tr>
-										<td colspan="2" style="text-align:center;">
-											<h2>Important Notes</h2>
-										</td>
-									</tr>
-									<tr>
-										<td style="vertical-align:top; width:8px;">
-											<img src="images/blue-transparent-plus.png" alt="" style="padding-bottom:2px;">
-										</td>
-										<td style="text-align:left;">
-											Since this site is still young and is morphing quite frequently, locations of pages may be changing frequently. If you link to a page using just the URL found in the address bar, the link may be broken within minutes.<br>
-											To solve this problem this site has made a redirect.php page. At the bottom of each page on this site, there will be a URL that will always get you to the page you're on. Please use that URI to link to. Thank you.<br><br>
-											Fun Fact: This site also uses the redirect.php page for all of it's links so that if a page changes paths, all that will need to be changed is the redirect.php page rather than all the pages that happen to link to the page that changed paths. Cool, right?!
-										</td>
-									</tr>
-								</table>
+							<td>
+								<h2>Important Notes</h2>
+								Since this site is still young and is morphing quite frequently, locations of pages may be changing frequently. If you link to a page using just the URL found in the address bar, the link may be broken within minutes.<br>
+								To solve this problem this site has made a redirect.php page. At the bottom of each page on this site, there will be a URI that will always get you to the page you're on. Please use that URI to link to. Thank you.<br><br>
+								Fun Fact: This site also uses the redirect.php page for all of it's links so that if a page changes paths, all that will need to be changed is the redirect.php page rather than all the pages that happen to link to the page that changed paths. Cool, right?!
 							</td>
 						</tr>
 						<tr>
-							<td colspan="5">
-								<?php
-									create_vertical_space("15px");
-								?>
-							</td>
-						</tr>
-						<tr class="bottommost">
-							<td colspan="3" class="bottommost">
-								<table>
-									<tr>
-										<td colspan="2" style="text-align:center;">
-											<h2>Side Notes</h2>
-										</td>
-									</tr>
-									<tr>
-										<td style="vertical-align:top; width:8px;">
-											<img src="images/blue-transparent-plus.png" alt="" style="padding-bottom:2px;">
-										</td>
-										<td style="text-align:left;">
-											To developers or geeks: If you would like to know the PHP source code for any page on the site, simply send an email request to <a href="mailto:admin@compdewddevelopment.com" target="_blank">admin@compdewddevelopment.com</a> with the URL of the corresponding page included (can be either the address bar URL or the corresponding redirect page URL, just as long as I know what you're talking about).<br>
-											The release of the code is at the site owner's discretion, so some code (such as database queries) may not be given for security reasons. If this is the case, the omitted code will be replaced with some kind of pseudo-code or an explanation.
-										</td>
-									</tr>
-								</table>
+							<td>
+								<h2>Side Notes</h2>
+								<td>
+									<img src="images/blue-transparent-plus.png" alt="" style="padding-bottom:2px;">
+								</td>
+								<td style="text-align:left;">
+									To developers or geeks: If you would like to know the source code for any page on the site, simply visit <a href="https://github.com/compdewd/compdewddevelopment.com/" target="_blank">this GitHub repository</a>.
+								</td>
 							</td>
 						</tr>
 					</table>
