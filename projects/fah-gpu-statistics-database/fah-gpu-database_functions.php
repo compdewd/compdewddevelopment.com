@@ -97,4 +97,40 @@
 			$connection->close();
 		}
 	}
+	
+	function output_viewing_option($request_var, $output_var)
+	{
+		echo "
+			<input type=\"checkbox\" name=\"" . $request_var . "\" id=\"" . $request_var . "\" value=\"false\"
+		";
+		if (isset($_GET[$request_var]) && $_GET[$request_var] == "false")
+		{
+			echo " checked";
+		}
+		echo "
+			>
+			<span class=\"label\" onClick=\"toggleElement('" . $request_var . "')\">
+				Do Not Show \"" . $output_var . "\"
+			</span>
+			<br>
+		";
+	}
+	
+	function output_additional_option($request_var, $ouput_var)
+	{
+		echo "
+			<input type=\"checkbox\" name=\"" . $request_var . "\" id=\"" . $request_var . "\" value=\"true\"
+		";
+		if (isset($_GET[$request_var]) && $_GET[$request_var] == "true")
+		{
+			echo " checked";
+		}
+		echo "
+			>
+			<span class=\"label\" onClick=\"toggleElement('" . $request_var . "')\">
+				" . $output_var . "
+			</span>
+			<br>
+		";
+	}
 ?>

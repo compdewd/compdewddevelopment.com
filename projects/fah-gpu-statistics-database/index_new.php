@@ -224,17 +224,15 @@
 									?>
 								</td>
 								<td class="viewing-options">
-									<input type="checkbox" name="viewOverclocked" value="false"
-										<?php
-											if (isset($_GET['viewOverclocked']) && $_GET['viewOverclocked'] == "false")
-											{
-												echo " checked";
-											}
-										?>
-									>
-									<span class="label" onClick="toggleElement('viewOverclocked')">
-										Do Not Show "Overclocked?"
-									</span>
+									<?php
+										output_viewing_option("viewOverclocked", "Overclocked?");
+										output_viewing_option("viewClockSpeed", "Clock Speed");
+										output_viewing_option("viewDriverVersion", "Driver Version");
+										output_viewing_option("viewFahCore", "FAH Core");
+										output_viewing_option("viewFahCoreVersion", "FAH Core Version");
+										output_viewing_option("viewInfoSource", "Info Source");
+										output_viewing_option("viewDateSubmitted", "Date Submitted");
+									?>
 								</td>
 							</tr>
 							<tr>
@@ -246,7 +244,10 @@
 							</tr>
 							<tr>
 								<td colspan="5" class="additional-options">
-									
+									<?php
+										output_additional_option("showOnlyActiveProjects", "Show Only Records with Active Projects");
+										output_additional_option("sortByPpd", "Sort by PPD (highest to lowest)");
+									?>
 								</td>
 							</tr>
 							<tr>
