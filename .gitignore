@@ -2,3 +2,4 @@
 *.pdn
 images/
 database_connect.php
+error_handler.php
