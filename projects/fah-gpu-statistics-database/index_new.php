@@ -260,7 +260,8 @@
 				</div>
 				<div id="stats">
 					<?php
-						
+						output_table_header($_GET['show']);
+						output_stats($_GET);
 					?>
 				</div>
 			</div>
