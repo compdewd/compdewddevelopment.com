@@ -63,13 +63,13 @@
 						else
 							$required_is_set = false;
 						if (isset($_POST['model']) && trim($_POST['model']) != "")
-							$model = filter_var(trim($_POST['model'], FILTER_SANITIZE_STRING, array(FILTER_FLAG_STRIP_LOW, FILTER_FLAG_STRIP_HIGH));
+							$model = filter_var(trim($_POST['model']), FILTER_SANITIZE_STRING, array(FILTER_FLAG_STRIP_LOW, FILTER_FLAG_STRIP_HIGH));
 						else
-							$required_is_set = false
+							$required_is_set = false;
 						if (isset($_POST['project']) && trim($_POST['project']) != "")
 							$project = filter_var(trim($_POST['project']), FILTER_SANITIZE_NUMBER_INT);
 						else
-							$required_is_set = false
+							$required_is_set = false;
 						if (isset($_POST['time_per_frame']))
 							$time_per_frame = filter_var(trim($_POST['time_per_frame']), FILTER_SANITIZE_STRING, array(FILTER_FLAG_STRIP_LOW, FILTER_FLAG_STRIP_HIGH));
 						if (isset($_POST['points_per_day']))
@@ -79,7 +79,7 @@
 						if (isset($_POST['clock_speed']))
 							$clock_speed = filter_var(trim($_POST['clock_speed']), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 						if (isset($_POST['driver_version']))
-							$driver_version = filter_var(trim($POST['driver_version']), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+							$driver_version = filter_var(trim($_POST['driver_version']), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 						if (isset($_POST['core']))
 							$core = filter_var(trim($_POST['core']), FILTER_SANITIZE_STRING, array(FILTER_FLAG_STRIP_LOW, FILTER_FLAG_STRIP_HIGH));
 						if (isset($_POST['core_version']))
@@ -89,18 +89,18 @@
 						
 						if ($required_is_set == true)
 						{
-							$connection = new mysqli();
+							$connection = new mysqli($dbGpuStatistics_host, $dbGpuStatistics_user, $dbGpuStatistics_password, $dbGpuStatistics_name);
 							if ($connection)
 							{
 								$statement = $connection->prepare
 									("
-										INSERT INTO '$dbFahTables_TUserSubmissions' 
-											(strChipset, strModel, strProject, strTimePerFrame, strPointsPerDay, strOverclocked, strClockSpeed, strDriverVersion, strCore, strCoreVersion, strInformationSource, strDateSubmitted)
+										INSERT INTO TUserSubmissions 
+											(strChipset, strModel, strProject, strTimePerFrame, strPointsPerDay, strOverclocked, strClockSpeed, strDriverVersion, strCore, strCoreVersion, strInformationSource, dtmDateSubmitted)
 										VALUES
-											(?,?,?,?,?,?,?,?,?,?,?,?)
+											(?,?,?,?,?,?,?,?,?,?,?,NOW())
 										;
 									");
-								$statement->bind_param("ssssssssssss", $chipset, $model, $project, $time_per_frame, $points_per_day, $overclocked, $clock_speed, $driver_version, $core, $core_version, $information_source, $date_submitted);
+								$statement->bind_param("sssssssssss", $chipset, $model, $project, $time_per_frame, $points_per_day, $overclocked, $clock_speed, $driver_version, $core, $core_version, $information_source);
 								$statement->execute();
 								$connection->close();
 								
@@ -119,7 +119,7 @@
 					}
 					else
 					{
-						output_form(false, "", "", "", "", "", "", "", "", "", "", "");
+						output_form(false, "", "", "", "", "", "unknown", "", "", "", "", "");
 					}
 				?>
 			</div>
@@ -129,4 +129,3 @@
 		</div>
 	</body>
 </html>
-?>
