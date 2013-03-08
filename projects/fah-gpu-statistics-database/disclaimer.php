@@ -15,9 +15,8 @@
 	<body>
 		<?php
 			create_header("Folding@Home GPU Statistics Database", "Disclaimer");
-			create_vertical_space("20px");
 		?>
-		<div id="bodyer">
+		<div id="bodyer" style="text-align:justify;">
 			Please note that there is a possibility that information in the database could be incorrect due to numerous factors.
 			It is important to note this possibility so, if using The Database as a buying guide, that the purchase of a video/graphics card is not mistakenly made, with the expected results of the card greater than the actual output of the card.
 			Please recall that The Pande Group advises that hardware not be bought with the sole intent for folding. 
