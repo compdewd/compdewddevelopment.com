@@ -7,10 +7,10 @@
 			<table cellspacing=\"4px\">
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"Chipset\">GPU Chipset</label>
+						<label for=\"chipset\">GPU Chipset</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"Chipset\" value=\"";
+						<input type=\"text\" name=\"chipset\" value=\"";
 		echo $chipset;
 		echo "\">";
 		if ($submitted == true && $chipset == "")
@@ -22,10 +22,10 @@
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"Model\">GPU Model</label>
+						<label for=\"model\">GPU Model</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"Model\" value=\"";
+						<input type=\"text\" name=\"model\" value=\"";
 		echo $model;
 		echo "\">";
 		if ($submitted == true && $model == "")
@@ -37,10 +37,10 @@
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"Project\">Current Project</label>
+						<label for=\"project\">Current Project</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"Project\" value=\"";
+						<input type=\"text\" name=\"project\" value=\"";
 		echo $project;
 		echo "\">";
 		if ($submitted == true && $project == "")
@@ -52,20 +52,20 @@
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"TPF\">TPF</label>
+						<label for=\"time_per_frame\">TPF</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"TPF\" value=\"";
+						<input type=\"text\" name=\"time_per_frame\" value=\"";
 		echo $time_per_frame;
 		echo "\">
 					</td>
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"PPD\">PPD</label>
+						<label for=\"points_per_day\">PPD</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"PPD\" value=\"";
+						<input type=\"text\" name=\"points_per_day\" value=\"";
 		echo $points_per_day;
 		echo "\">
 					</td>
@@ -78,79 +78,79 @@
 		";
 		if ($overclocked == "yes")
 		{
-			echo "<input type=\"radio\" name=\"Overclocked\" value=\"yes\" checked=\"true\">Yes</input><br>";
+			echo "<input type=\"radio\" name=\"overclocked\" value=\"yes\" checked=\"true\">Yes</input><br>";
 		}
 		else
 		{
-			echo "<input type=\"radio\" name=\"Overclocked\" value=\"yes\">Yes</input><br>";
+			echo "<input type=\"radio\" name=\"overclocked\" value=\"yes\">Yes</input><br>";
 		}
 
 		if ($overclocked == "no")
 		{
-			echo "<input type=\"radio\" name=\"Overclocked\" value=\"no\" checked=\"true\">No</input><br>";
+			echo "<input type=\"radio\" name=\"overclocked\" value=\"no\" checked=\"true\">No</input><br>";
 		}
 		else
 		{
-			echo "<input type=\"radio\" name=\"Overclocked\" value=\"no\">No</input><br>";
+			echo "<input type=\"radio\" name=\"overclocked\" value=\"no\">No</input><br>";
 		}
 
-		if ($overclocked == "")
+		if ($overclocked == "unknown")
 		{
-			echo "<input type=\"radio\" name=\"Overclocked\" value=\"unknown\" checked=\"true\">Unknown</input><br>";
+			echo "<input type=\"radio\" name=\"overclocked\" value=\"unknown\" checked=\"true\">Unknown</input><br>";
 		}
 		else
 		{
-			echo "<input type=\"radio\" name=\"Overclocked\" value=\"unknown\">Unknown</input><br>";
+			echo "<input type=\"radio\" name=\"overclocked\" value=\"unknown\">Unknown</input><br>";
 		}
 		echo "
 					</td>
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"Clock_Speed\">Core Clock Speed</label>
+						<label for=\"clock_speed\">Core Clock Speed</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"Clock_Speed\" value=\"";
+						<input type=\"text\" name=\"clock_speed\" value=\"";
 		echo $clock_speed;
 		echo "\">
 					</td>
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"Driver_Version\">Driver Version</label>
+						<label for=\"driver_version\">Driver Version</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"Driver_Version\" value=\"";
+						<input type=\"text\" name=\"driver_version\" value=\"";
 		echo $driver_version;
 		echo "\">
 					</td>
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"FAH_Core\">FAH Core</label>
+						<label for=\"core\">FAH Core</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"FAH_Core\" value=\"";
+						<input type=\"text\" name=\"core\" value=\"";
 		echo $core;
 		echo "\">
 					</td>
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"FAH_Core_Version\">FAH Core Version</label>
+						<label for=\"core_version\">FAH Core Version</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"FAH_Core_Version\" value=\"";
+						<input type=\"text\" name=\"core_version\" value=\"";
 		echo $core_version;
 		echo "\">
 					</td>
 				</tr>
 				<tr>
 					<td style=\"text-align:right;\">
-						<label for=\"Information_Source\">Information Source</label>
+						<label for=\"information_source\">Information Source</label>
 					</td>
 					<td>
-						<input type=\"text\" name=\"Information_Source\" value=\"";
+						<input type=\"text\" name=\"information_source\" value=\"";
 		echo $information_source;
 		echo "\">
 					</td>
