@@ -260,7 +260,24 @@
 						(
 							 $why_use_this_database
 							,"
-								This database is
+								This database is one of many third-party GPU databases for Folding@Home. You are free to choose whichever fits your needs. 
+								I am not going to say that this is the database you should use and that it is better than the rest. No. However, what I
+								will say is that this database strives to fulfill the needs of as many users as possible with as many features as possible
+								so that the job for the user is easier. There are some things about this database that I find unique and that many will find
+								attractive. I have not seen a GPU database like this one that offers the features and options that this one offers. I did 
+								not create this database to compete or try to overtake the other databases. I saw the need for an organized database that
+								offered information that people often asked about. I realized that I could use my skills to offer something to the world
+								that helped others and I did it. It has been a great experience so far and I hope that others feel the same.
+								<br>
+								<br>
+								You may be wondering what this database offers that other databases (as far as I've seen) do not. The primary feature is 
+								interactive filtering of data. I believe any collection of data should have a simple way of organizing that data to be
+								browsed through. If a collection of data is not presented with filtering options, it is just a bunch of data that can be
+								intimidating if it is a large amount and that can be very disorganized for the user.
+								<br>
+								<br>
+								<a href=\"index.php\">Check out the database</a> to see what I'm talking about!
+								</ul>
 							"
 						);
 					?>
@@ -271,7 +288,13 @@
 						(
 							 $when_will_new_data_appear
 							,"
-								
+								At this time, the only way to know if new data has been added is to keep up with the updates thread on the Folding@Home
+								Support Forum which can be found <a href=\"http://foldingforum.org/viewtopic.php?f=14&t=22281\" target=\"_blank\">here</a>.
+								<br>
+								<br>
+								There are plans for a way to notify users of updates if they decide they want to be notified. There are also plans of 
+								a page that lists the updates to the database that users can check if they want to know if new updates have taken place.
+								There is no time frame for this, however.
 							"
 						);
 					?>
@@ -281,7 +304,12 @@
 						create_faq_answer
 						(
 							 $why_has_data_changed
-							,""
+							,"
+								If you study the data in the database long enough, you may at times notice a change. This is because of an effort to 
+								correct an error in the data. The error may result in an entry into the database that was not correct from the start
+								and not fixed until later, or it may result from a change in the Folding@Home points calculation as a whole or for 
+								individual projects.
+							"
 						);
 					?>
 				</div>
@@ -290,7 +318,24 @@
 						create_faq_answer
 						(
 							 $why_has_data_been_deleted
-							,""
+							,"
+								The primary reason for data disappering from the database is because of an effort to maintain high data integrity. 
+								One way of measuring data integrity of certain data is to measure its value to the database. A highly valued record
+								in the database is one that contains as much information as possible and has significant meaning to a user. A lowly 
+								valued record is one that has most information fields missing and that would not have significant meaning to a user.
+								If a record is missing information that would prevent it from being used in the case of a points calculation change,
+								that record is in danger of being deleted from the database.
+								<br>
+								<br>
+								An example of a lowly valued record is one that is missing information about clock speed, if it is overclocked or not,
+								and driver used for the GPU. Without this information, a user would have to assume things about the record. That record
+								is not particularly useful to a user that is considering purchasing the same graphics card as the record. The user
+								would not know what drivers produce the best output, how much they could potentially overclock, and if the 
+								information contained in the record is from an overclocked card or not. This causes the user to look for more
+								information which makes the user's job harder, which causes the user stress and frustration. I would like to avoid 
+								that scenario and instead make the user happy. That's why I like valuable records in the database and not invaluable
+								records.
+							"
 						);
 					?>
 				</div>
@@ -299,7 +344,34 @@
 						create_faq_answer
 						(
 							 $how_to_contribute
-							,""
+							,"
+								If you would like to contribute to The Folding@Home GPU Statistics Database, you must first be a contributor to the
+								Folding@Home project since the data contained in the database is performance data relative to the Folding@Home project.
+								You must use a GPU to contribute if you would like to contribute to this database.
+								<br>
+								<br>
+								Now that the prerequisites are covered, contribution to the database is easy. There are a few options you have to
+								contribute to the database and whatever works for you works for me. Your options are:
+								<ul>
+									<li>
+										Use the form found <a href=\"add.php\">here</a>. Make sure to include the chipset, model, project, and the 
+										time per frame.
+									</li>
+									<li>
+										Email <a href=\"mailto:admin@compdewddevelopment.com\" target=\"_blank\">admin@compdewddevelopment.com</a>.
+										You may email two different things:
+										<ul>
+											<li>
+												A list of your data
+											</li>
+											<li>
+												If you are an HFM.NET user, you may email the \"WuHistory.db3\" file. Directions for finding the file
+												can be found here.
+											</li>
+										</ul>
+									</li>
+								</ul>
+							"
 						);
 					?>
 				</div>
@@ -308,7 +380,26 @@
 						create_faq_answer
 						(
 							 $where_is_my_contribution
-							,""
+							,"
+								If you used the form on this site to submit data, please be aware that your data is not immediately inserted into the
+								database. In fact, your data is sent to another database to be manually filtered through and inserted into the main
+								database. There are two reasons for doing this:
+								<ul>
+									<li>
+										It ensures that the data in the main database is always of a high integrity:
+										<ul>
+											<li>There are no records of people laying their face on their keyboard.<li>
+											<li>There are no records with misspellings or typing errors.</li>
+											<li>All records follow the same format.</li>
+										</ul>
+									</li>
+									<li>
+										It ensures that if there is a vulnerability found in the code, that attackers cannot affect the main database,
+										only the database of user submissions.
+									</li>
+								</ul>
+								The database of user submissions is emptied once the records from it are inserted into the main database.
+							"
 						);
 					?>
 				</div>
@@ -344,7 +435,15 @@
 						create_faq_answer
 						(
 							 $rules_of_data_copying
-							,""
+							,"
+								The data contained in this database is open for the public to copy and even to use in their own database.
+								There are no restrictions on what you do with the data contained in this database. I would appreciate if you didn't
+								copy the data just to have a competing database, but you do have that option, I suppose. Do note that there
+								<em>is</em> a restriction on the code used to create the interactive filtering for the database. It is open source,
+								however that does not mean that you can copy and use the code or even copy, modify, and then use the code.
+								You may redistribute the code giving credit where credit is due. If you want to find the code used, it can be
+								found on GitHub here.
+							"
 						);
 					?>
 				</div>
@@ -353,7 +452,11 @@
 						create_faq_answer
 						(
 							 $are_there_more_databases
-							,""
+							,"
+								At this time there are no other databases offered by Patrick and there are no plans for any.
+								If you have an idea for a database, send an email to <a href=\"mailto:suggestionbox@compdewddevelopment.com\"
+								target=\"_blank\">suggestionbox@compdewddevelopment.com</a>.
+							"
 						);
 					?>
 				</div>
@@ -362,7 +465,11 @@
 						create_faq_answer
 						(
 							 $what_to_do_with_questions
-							,""
+							,"
+								If you have a question that was not listed here or that was not answered to meet your satisfaction, send an
+								email to <a href=\"mailto:support@compdewddevelopment.com\" target=\"_blank\">support@compdewddevelopment.com\"
+								</a>.
+							"
 						);
 					?>
 				</div>
