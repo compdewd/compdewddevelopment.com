@@ -14,7 +14,7 @@
 	<body>
 		<div id="wrapper">
 			<?php
-				create_header("CompdewdDevelopment", "Home");
+				create_header("Compdewd Development", "Home");
 			?>
 			<div id="bodyer">
 				<div id="navigation">

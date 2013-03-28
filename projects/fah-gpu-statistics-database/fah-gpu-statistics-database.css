@@ -1,86 +1,115 @@
-textarea
-	{
-		resize: none;
-		color: white;
-		background-color: black;
-		border: 1px solid #c0c0c0;
-		width: 207px;
-	}
-#filterOptions
-	{
-		margin-top: 20px;
-		margin-bottom: 20px;
-		border-top: 1px solid white;
-		border-bottom: 1px solid white;
-		width: inherit;
-		padding: 5px;
-		line-height: 23px;
-	}
+#database-links
+{
+	width: 100%;
+	text-align: center;
+}
+#database-links td
+{
+	height: 15px;
+	padding: 10px;
+	display: inline-block;
+}
+#database-links img
+{
+	height: 15px;
+	width: 15px;
+}
 #addToDatabase
-	{
-		background-image: url(http://www.compdewddevelopment.com/images/green-plus-sprite.png);
-		background-position: 0px 0px;
-		background-repeat: no-repeat;
-		height: 15px;
-		text-indent: 20px;
-		display: inline-block;
-		margin-bottom: 0px;
-	}
+{
+	background-image: url(http://www.compdewddevelopment.com/images/green-plus-sprite.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	display: inline-block;
+	margin-bottom: 0px;
+	height: 15px;
+}
 #addToDatabase:hover
-	{
-		background-position: 0px -15px;
-	}
-#gpuStatsTable
-	{
-		margin-left: auto;
-		margin-right: auto;
-		min-width: 600px;
-		padding-right: 15px;
-	}
-#gpuStatsTable td, th
-	{
-		text-align: center;
-		vertical-align: middle;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-#gpuStatsTableHeader
-	{
-		background-color: black;
-		width: inherit;
-	}
-#gpuStatsTableHeader th
-	{
-		vertical-align: middle;
-		text-align: center;
-	}
-/*.gpuStatsTableHeader
-	{
-		position: absolute;
-		z-index: 1;
-		top: -38px;
-	}
-.gpuStatsTableHeader_fixed
-	{
-		position: fixed;
-		top: 0px;
-		border: 1px solid #c0c0c0;
-		border-top: none;
-	}*/
-#topRedirectionDiv
-	{
-		background-color: black;
-		position: fixed;
-		right: 5px;
-		bottom: 5px;
-	}
+{
+	background-position: 0px -15px;
+}
+.firstLink
+{
+	border-right: 1px solid white;
+}
+.middleLink
+{
+	border-right: 1px solid white;
+}
+#heading-filtering-options, #heading-viewing-options, #heading-additional-options
+{
+	font-weight: 900;
+}
+#database-filter-options
+{
+	line-height: 23px;
+}
+#database-filter-options tr
+{
+	padding: 5px;
+}
+#database-filter-options td
+{
+	vertical-align: top;
+}
+#filter-button
+{
+	text-align: center;
+	height: 25px;
+	width: 75px;
+}
+#stats-table
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+#stats-table td
+{
+	text-align: center;
+}
+#stats_table_header
+{
+	border-bottom: 1px dashed grey;
+}
+#stats_table_header th
+{
+	vertical-align: middle;
+	text-align: center;
+	font-weight: 900;
+	height: 38px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.record_table
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+.record_table td
+{
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
 .label
-	{
-		display: inline-block;
-		cursor: default;
-	}
-.filterSubOption
-	{
-		position: relative;
-		left: 18px;
-	}
+{
+	cursor: normal;
+}
+.textarea_information_source
+{
+	resize: none;
+	color: white;
+	background-color: black;
+	border: 1px solid #c0c0c0;
+	width: 100%;
+}
+.error
+{
+	color: red;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid red;
+}

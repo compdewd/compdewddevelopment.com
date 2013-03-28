@@ -23,9 +23,9 @@
 		{
 			echo '<meta http-equiv="refresh" content="0; URL=projects/fah-gpu-statistics-database/index.php">';
 		}
-		else if ($_GET['target'] == "about-fah-gpu-database")
+		else if ($_GET['target'] == "about-fah-gpu-database" || $_GET['target'] == "fah-gpu-database-faq")
 		{
-			echo '<meta http-equiv="refresh" content="0; URL=projects/fah-gpu-statistics-database/about.php">';
+			echo '<meta http-equiv="refresh" content="0; URL=projects/fah-gpu-statistics-database/faq.php">';
 		}
 		else if ($_GET['target'] == "add-to-fah-gpu-database")
 		{

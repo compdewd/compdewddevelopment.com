@@ -11,8 +11,9 @@
 	$why_use_this_database = "There are other GPU databases for Folding@Home. Why should I use this one?";
 	$when_will_new_data_appear = "How will I know when there is new data to look through?";
 	$why_has_data_changed = "I saw data here before that has been changed. What happened?";
-	$what_has_data_been_deleted = "I saw data here before that is now gone. What happened?";
+	$why_has_data_been_deleted = "I saw data here before that is now gone. What happened?";
 	$how_to_contribute = "How can I contribute?";
+	$where_is_the_wuhistory_file = "Where can I find the \"WuHistory.db3\" file?";
 	$where_is_my_contribution = "I submitted data to the database, but I don't see it. What happened?";
 	$how_to_link_to_set_of_records = "How do I link to a set of records in the database?";
 	$how_to_link_to_a_record = "How do I link to a particular record in the database?";
@@ -20,6 +21,12 @@
 	$rules_of_data_copying = "May I copy the data from the database?";
 	$are_there_more_databases = "Are there other databases here?";
 	$what_to_do_with_questions = "I have a question that isn't listed here. What should I do?";
+	
+	function create_faq_answer($question, $answer)
+	{
+		echo "<h2 class=\"faq_question\" id=\"" . $question . "\">" . $question . "</h2>";
+		echo "<div class=\"faq_answer\">" . $answer . "</div>";
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +36,22 @@
 		?>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		
+		<style type="text/css">
+			.faq_question
+			{
+				text-indent: 0px;
+			}
+			.faq_answer
+			{
+				margin-left: 25px;
+				text-align: justify;
+			}
+			#navigation
+			{
+				font-size: medium;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -109,6 +132,13 @@
 							</a>
 						</li>
 						<li>
+							<a href="#where_is_the_wuhistory_file">
+								<?php
+									echo $where_is_the_wuhistory_file;
+								?>
+							</a>
+						</li>
+						<li>
 							<a href="#where_is_my_contribution">
 								<?php
 									echo $where_is_my_contribution;
@@ -158,6 +188,8 @@
 							</a>
 						</li>
 					</ul>
+					<br>
+					<a href="../../redirect.php?target=fah-gpu-database">Return to the Database</a>
 				</div>
 				<div id="what_is_fah">
 					<?php
@@ -181,7 +213,7 @@
 										</a>
 									</li>
 									<li>
-										If you have any questions that you can't seem to find, head over to 
+										If you have any questions that you can't seem to find the answers to, head over to 
 										<a href=\"http://foldingforum.org/index.php\" target=\"_blank\">
 											The Folding@Home Support Forum
 										</a>
@@ -375,6 +407,27 @@
 						);
 					?>
 				</div>
+				<div id="where_is_the_wuhistory_file">
+					<?php
+						create_faq_answer
+						(
+							 $where_is_the_wuhistory_file
+							,"
+								If you would like to contribute and you meet <a href=\"#how_to_contribute\">the prerequisites</a> or
+								if you would just like to learn how to find a miscellaneous file, the directions are below.
+								<ol type=\"1\">
+									<li>In <a href=\"https://code.google.com/p/hfm-net/\" target=\"_blank\">HFM.NET</a>, go to the top
+										menu bar and select \"Help\".</li>
+									<li>In the menu that you get from that, click \"View HFM.NET Data Files\". An explorer window should
+										come up.</li>
+									<li>At the bottom (assuming it is ordered by filename alphabetically) there exists the file. If 
+										the file is not there, try waiting until you have completed a WU with HFM running, then look
+										again.</li>
+								</ol>
+							"
+						);
+					?>
+				</div>
 				<div id="where_is_my_contribution">
 					<?php
 						create_faq_answer
@@ -388,13 +441,13 @@
 									<li>
 										It ensures that the data in the main database is always of a high integrity:
 										<ul>
-											<li>There are no records of people laying their face on their keyboard.<li>
+											<li>There are no records of people laying their face on their keyboard.</li>
 											<li>There are no records with misspellings or typing errors.</li>
 											<li>All records follow the same format.</li>
 										</ul>
 									</li>
 									<li>
-										It ensures that if there is a vulnerability found in the code, that attackers cannot affect the main database,
+										It ensures that if there is a vulnerability exploited in the code, that attackers cannot affect the main database,
 										only the database of user submissions.
 									</li>
 								</ul>
@@ -408,7 +461,11 @@
 						create_faq_answer
 						(
 							 $how_to_link_to_set_of_records
-							,""
+							,"
+								The word \"set\" in this case implies that the set of records have something in common. There is 
+								currently no support for selecting multiple records to be isolated without having something in common
+								that can be selected by using the filtering options provided.
+							"
 						);
 					?>
 				</div>
@@ -417,7 +474,18 @@
 						create_faq_answer
 						(
 							 $how_to_link_to_a_record
-							,""
+							,"
+								Linking to a single record can be acheived by clicking on the \"&raquo;\" on the left side of a record
+								when viewing in \"Show All Stats Entries\". This will direct you to a page with only that record on it.
+								That page/record can be linked back to by copying the URI in the address bar.
+								<br>
+								<br>
+								Another handy trick is being able to point to a record in a set of records with what is called a 
+								\"fragment identifier\". For example, if you filter down to a set of models, but rather than point to
+								a specific record that becomes isolated on its own page, you can point to the record in the set on
+								the current page! Cool, I know. I'm not sure why someone would want to do this, but I made it available
+								for those who find the need for it.
+							"
 						);
 					?>
 				</div>
@@ -426,7 +494,11 @@
 						create_faq_answer
 						(
 							 $how_many_users
-							,""
+							,"
+								The last time I checked my statistics on visitors, it was just over one thousand unique IP addresses.
+								That was back in February of 2013. I can create a script to give the number of unique visitors on this page
+								if it is requested.
+							"
 						);
 					?>
 				</div>
@@ -442,7 +514,9 @@
 								<em>is</em> a restriction on the code used to create the interactive filtering for the database. It is open source,
 								however that does not mean that you can copy and use the code or even copy, modify, and then use the code.
 								You may redistribute the code giving credit where credit is due. If you want to find the code used, it can be
-								found on GitHub here.
+								found on GitHub 
+								<a href=\"https://github.com/compdewd/compdewddevelopment.com/tree/master/projects/fah-gpu-statistics-database\"
+								target=\"_blank\">here</a>.
 							"
 						);
 					?>
@@ -467,7 +541,7 @@
 							 $what_to_do_with_questions
 							,"
 								If you have a question that was not listed here or that was not answered to meet your satisfaction, send an
-								email to <a href=\"mailto:support@compdewddevelopment.com\" target=\"_blank\">support@compdewddevelopment.com\"
+								email to <a href=\"mailto:support@compdewddevelopment.com\" target=\"_blank\">support@compdewddevelopment.com
 								</a>.
 							"
 						);
